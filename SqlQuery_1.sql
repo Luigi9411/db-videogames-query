@@ -1,6 +1,5 @@
-﻿ 
-  
-   SELECT COUNT(*)
-    FROM videogames
-    WHERE software_house_id = 1
-    AND YEAR(release_date) = 2018;
+﻿SELECT videogame_id, AVG(rating) AS rating
+FROM reviews
+GROUP BY videogame_id
+ORDER BY rating DESC;
+
